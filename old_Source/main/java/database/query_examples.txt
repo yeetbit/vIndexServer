@@ -1,0 +1,36 @@
+// Backup: before making any changes on your database, make sure you make  back up:
+    .backup <backupname>
+
+// Restore: restore database after making a mistake:
+    .restore <backupname>
+
+// Joining: JOIN different tables & ORDER BY: 
+    SELECT artists.name, albums.name, songs.track, songs.title FROM songs 
+    INNER JOIN albums ON songs.album = albums._id 
+    INNER JOIN artists ON albums.artist = artists._id 
+    ORDER BY artists.name, albums.name, songs.track, songs.title;
+
+// Filtering: JOIN different tables & display WHERE entrys LIKE keyword, ORDER them BY columns:
+    SELECT artists.name, albums.name, songs.track, songs.title FROM songs 
+    INNER JOIN albums ON songs.album = albums._id
+    INNER JOIN artists ON albums.artist = artists._id
+    WHERE songs.title LIKE '%doctor%' 
+    ORDER BY artists.name, albums.name, songs.track, songs.title;
+
+// Create view: 
+    CREATE VIEW art_alb_trck_order as
+    SELECT artists.name, albums.name, songs.track, songs.title FROM songs 
+    INNER JOIN albums ON songs.album = albums._id 
+    INNER JOIN artists ON albums.artist = artists._id 
+    ORDER BY artists.name, albums.name, songs.track, songs.title;
+
+// Delete view:
+    DROP VIEW art_alb_trck_order;
+
+// Count: integrated function that counts how many records in selected table(s):
+    SELECT count(*) FROM <tablename>
+
+// Update: change record entry:
+    UPDATE employees SET city = "Hilversum" WHERE employeeid = "564";
+
+

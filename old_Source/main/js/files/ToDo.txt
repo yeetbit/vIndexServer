@@ -1,0 +1,18 @@
+
+ToDo:
+        main viewport function
+        function for storage in JSON database 
+        app build as PWA(progressive_web_application)
+        Responsive design, 80% mobile 20% PC
+        "Show in tiles" function(hand in hand with design)
+        drop down options menu
+        login
+
+
+future improvements:
+
+        -added functionality UICTRL.idrange
+                momentalily the algorithm scans only the last object in the array,
+                but for more accuracy if there is a possibility that no conditions are met,
+                then scan al rows for the last ID. Eventualy is this maybe a better solution.
+
