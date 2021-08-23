@@ -1,9 +1,8 @@
 
 package vindexserver;
-import java.time.LocalDateTime;
-import java.time.chrono.JapaneseDate;
-import java.time.chrono.ThaiBuddhistDate;
-import java.time.format.*;
+import vindexserver.assets.help.*;
+
+
 /**
  *
  * @author obi
@@ -14,18 +13,46 @@ public class VIndexServer {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        if(args.length!=0){
+            argumentParser(args);
+        }else{
+            ShowExample();
+        }
+   
+    }
+    
+    private static void argumentParser(String[] args){
+        for(String argStr:args){
+            switch (argStr){
+                case "Help": case "help": case "-H":  case "-h":
+                    System.out.println("Help menu");
+                    break;
+                case "Verbose": case "verbose": case "-V" : case "v":
+                    System.out.println("Verbose mode");
+                    break;
+                case "1": case "2": case "3": case "4":
+                    System.out.println("Goedemiddag");
+                    break;
+                case "Time": case "time": case "-T": case "-t":
+                    ShowTime();
+                    break;
+                default : System.out.println("No usable argument");
+                                           
+            }
+            
+        }
+
+    }
+    
+    private static void ShowTime(){
+        new DateTime();
+    }
+    
+    private static void ShowExample(){
         
-        LocalDateTime lDate = LocalDateTime.now();
-        ThaiBuddhistDate buddaDate = ThaiBuddhistDate.from(lDate);
-        JapaneseDate japDateSlutz = JapaneseDate.from(lDate);
-        String isoDate = lDate.format(DateTimeFormatter.ISO_DATE_TIME);
-        String dDate = lDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
-        System.out.println("Current Gregorian date: "+lDate+
-                "\nCurrent Thai Buddhist date: "+ThaiBuddhistDate.now()+
-                "\nCurrent Japanese date: "+JapaneseDate.now()+
-                "\nCurrent formatted Gregorian date: "+dDate);
-         
+        System.out.println("Poep");
+        
+        
     }
     
 }

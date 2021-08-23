@@ -1,0 +1,20 @@
+!@ help me yo! legend of chapter/article line delimiters:
+/**
+ *
+ * @author obi
+ * 
+ * usage of delimiters: 
+ *  !@ = Read Not at line go to next
+ *  &@ = Read Line
+ *  ;@ = Last line of article
+ *  ;& = Last line of current article, read more related details in other articles
+ *  && = Branching
+ * 
+ */
+
+!@ helpme yo! !!TITTLE
+!@ version 1
+
+
+
+
